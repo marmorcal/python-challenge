@@ -1,0 +1,25 @@
+# total number of months included in data set
+
+# net total amount of "Profit/Loses" over the entire period
+
+# changes in "Profit/Loses" over the entire period, and average changes
+
+# greatest increase in profits (date and amount) over entire period
+
+# greatest decrease in profits (date and amount) over entire period
+
+
+import os
+import csv
+
+csvpath = os.path.join("..", "Resources", "budget_data.csv")
+
+
+with open(csvpath) as data:
+
+    csvreader = csv.reader()
+    total = 0
+    for row in csv.reader(budget_data):
+        total += int(row[1])
+    print(total)
+
